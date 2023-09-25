@@ -1,22 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
 const initialState = {
     value: 0,
-    products: []
+    products : []
 }
 
 
 export const counterSlice = createSlice({
-    name: 'counter',
+    name : 'counter',
     initialState,
     reducers: {
-        increment: (state) => {
-          state.value += 1;
-        },
-
-       addProduct: (state, {payload})=> {
-        state.products.push(payload)
-       }
+      increment: (state) =>  {
+       state.value += 1
+      },
+      addProduct: (state, {paylaod}) => {
+        state.products.push(paylaod)
+      }
     }
 })
 
