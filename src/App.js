@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import { addProduct, increment } from './store/counterSlice';
+import Navbar from './components/navbar';
 
 
 function App() {
@@ -19,17 +20,18 @@ console.log(value)
  };
 
  const onAddProduct = () => {
-  dispatch(addProduct("Iphone") );
+  dispatch(addProduct() );
  };
   return (
    <div>
+    <Navbar />
     <h1>{value}</h1>
     <h2>{products}</h2>
     <button onClick={incremenByOne}>increment</button>
     <button onClick={onAddProduct}>add products</button>
    </div>
   );
-}
+  }
 
 export default App;
  
